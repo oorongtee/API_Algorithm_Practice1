@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Login</title>
+</head>
+<body>
+<!-- 包含登入按鈕，登入之後登出按鈕會取代登入按鈕-->
+    <header id="header">
+        <p>44</p>
+        <select id="colorSelector">
+            <option value="1">cerulean</option>
+            <option value="2">fuchsia rose</option>
+            <option value="3">true red</option>
+            <option value="4">aqua sky</option>
+            <option value="5">tigerlily</option>
+            <option value="6">blue turquoise</option>
+        </select>
+        <button id="loginButton">Login</button>
+        <button id="logoutButton">Logout</button>
+    </header>
+
+
+<!-- 取得token -->
+    <div id="login">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <div id="message"></div>
+    </div>
+
+<!-- 包含主頁用戶列表，查詢用戶，新增更改刪除用戶。共三個 -->
+    <section id="main">
+        <div class="container">
+
+        <div id="leftsideBar" class="left">
+            <nav id="leftsideNav">
+                <button id="userListButton" class="page-button" data-page="userList">用戶列表</button>
+                <button class="page-button" data-page="searchUser">查詢用戶</button>
+                <button class="page-button" data-page="monitorUser">操作用戶</button>
+            </nav>
+        </div>
+
+        <div id="rightsideBar" class="right">
+            <!--用戶列表-->
+            <div id="userList" class="page-content">
+                <div id="userListManipulate">
+                    <button id="userListSortMinButton">從小排到大</button>
+                    <button id="userListSortMaxButton">從大排到小</button>
+                    <input type="text" id="searchUserListFormInput" placeholder="請輸入用戶FirstName" required>
+                    <button id="searchUserListFormButton">查詢</button>
+                    <div id="userListMessage"></div>
+                </div>
+
+                <div id="userListForm"><div id="userListFormTitle">
+                    <div class="col">ID</div>
+                    <div class="col">Avatar</div>
+                    <div class="col">First_name</div>
+                    <div class="col">Last_name</div>
+                    <div class="col">Email</div>
+                    <div class="col">操作</div>
+                    </div>
+                     <!--用戶列表子元素會由js生成-->
+                </div>
+            </div>
+
+            <!--查詢用戶-->
+            <div id="searchUser" class="page-content">
+
+                <div id="searchUserListForm">
+                    <div id="searchUserCol">
+                    <input type="text" id="searchUserInput" placeholder="請輸入用戶ID" required>
+                    <button id="searchUserButton">查詢</button>
+                    <div id="searchUserListMessage"></div>
+                    </div>
+
+                    <div id="searchUserListFormTitle">
+                    <div class="col">ID</div>
+                    <div class="col">Avatar</div>
+                    <div class="col">First_name</div>
+                    <div class="col">Last_name</div>
+                    <div class="col">Email</div>
+                    </div>
+                     <!--用戶列表子元素會由js生成-->
+                </div>
+            </div>
+
+
+            <!--新增更改刪除用戶-->
+            <div id="monitorUser" class="page-content">
+                <div id="postUser">
+                    <input type="text" id="postUserName" placeholder="name" required>
+                    <input type="text" id="postUserJob" placeholder="Job" required>
+                    <button id="postUserButton">新增用戶</button>
+                    <div id="postUserMessage"></div>
+                </div>
+                <div id="deleteUser">
+                    <input type="text" id="deleteUserId" placeholder="ID" required>
+                    <button id="deleteUserButton">刪除用戶</button>
+                    <div id="deleteUserMessage"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+         <!--做填入textarea-->
+    </footer>
+
+    <script src="index.js"></script>
+
+
+</body>
+</html>

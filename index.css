@@ -1,0 +1,90 @@
+/* header : flexbox */
+
+/* 用戶列表 : grid */
+
+
+/* 主控制 */
+#login{
+    display:none;
+}
+
+#main{
+    display:none;
+}
+
+
+/* header元素 */
+#logoutButton{
+    display:none;
+}
+
+#header{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* main元素 */
+.container{
+    display: flex;
+}
+.container .left{
+    flex:1
+}
+.container .right{
+    flex:4
+}
+/* main左方 */
+#leftsideNav{
+    background-color:aqua;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.page-button{
+    background-color:aqua;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 30px 15px;
+    font-size: 25px;
+}
+
+
+.page-button::before {
+    content: "5555 ";
+}
+
+
+/* main右方 */
+#userList{
+    display:none;
+}
+#searchUser{
+    display:none;
+}
+#monitorUser{
+    display:none;
+}
+
+#userList, #searchUser{
+    padding:10px;
+}
+
+#userListFormTitle, .userDiv, #searchUserListFormTitle, #searchUserDiv{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px 10px;
+    border-bottom: 1px solid #333;
+    background-color: green;
+    color: white;
+}
